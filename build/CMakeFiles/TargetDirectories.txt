@@ -1,0 +1,3 @@
+/mnt/c/Users/guo/Desktop/miniNginx/build/CMakeFiles/http.dir
+/mnt/c/Users/guo/Desktop/miniNginx/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/guo/Desktop/miniNginx/build/CMakeFiles/rebuild_cache.dir
