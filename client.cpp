@@ -2,7 +2,14 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 //测试程序
-char cmd[]="你好冰岩";
+char cmd[]=R"(Request URL: http://localhost/api/v1/healthyRequest
+Method: GET
+
+Request Header:
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Wisn64; x64)AppleWebKit/537.36(KHTML,like Gecko)Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+)";
 int main()
 {
 
@@ -16,11 +23,10 @@ int main()
     int n=connect(sock,(sockaddr*)&serv_addr,sizeof(serv_addr));
     std::cerr<<n<<'\n';
     int x=send(sock,cmd,sizeof(cmd),0);
-  //  std::cerr<<x<<'\n';
     puts("成功发送");
     read(sock,cmd,sizeof(cmd));
     puts("成功接受服务端数据:");
-  //  printf("%s",s);
+    printf("%s",cmd);
     close(sock);
     return 0;
 }
